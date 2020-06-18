@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
+import AboutUs from './AboutComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -55,6 +56,7 @@ class Main extends Component {
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
                     <Route path='/menu/:dishId' component={DishWithId} />
+                    <Route path='/aboutus' component={() => <AboutUs leaders={this.state.leaders} />} />
                     <Route exact path='/contactus' component={Contact} />} />
                     <Redirect to="/home" />
                 </Switch>
